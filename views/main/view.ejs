@@ -1,0 +1,121 @@
+<%- include('./layout')%>
+
+
+<div class="am_tuya">
+    <div class="am_tuya_user">
+        <div class="am_tuya_user_ico"><img src="img/tx.jpg" alt=""></div>
+        <div class="am_tuya_user_info">
+            <div class="am_tuya_user_info_name" style="color:#22b6ed"><%= content.title %></div>
+            <div class="am_tuya_user_info_coordinate"><span class="am_tuya_user_info_time"><%= content.time.toLocaleString() %></span><%= content.author.username %></div>
+        </div>
+    </div>
+
+    <div class="am_tuya_content">
+        <div class="am_tuya_content_l">
+            <div class="am_tuya_more">
+                <div class="am_tuya_oneword"><%= content.content %></div>
+                <ul class="discuss_list">
+
+                </ul>
+
+                <div class="am_tuya_comment">
+                    <form class="am-form">
+                        <fieldset>
+                            <div class="am-form-group">
+                                <textarea class="" id='comment' placeholder="请在这里留下你的评论" rows="5" ></textarea>
+                                <input type="hidden" id='hidden' value="<%= content._id %>">
+                            </div>
+
+                            <p><button type="button" class="am-btn am-btn-default am-btn-block" id="commentBtn">发表评论</button></p>
+                        </fieldset>
+                    </form>
+                </div>
+            
+
+            <div class="am_news_load" style="background:#f4f4f4">
+                <ul data-am-widget="pagination"
+                    class="am-pagination am-pagination-select"
+                >
+
+
+                    <li class="am-pagination-prev ">
+                        <a href="javascript:;" class="">上一页</a>
+                    </li>
+
+
+                    <li class="am-pagination-select">
+                        <select>
+                            <option value="#" class="comment_detail">
+                            </option>
+                        </select>
+                    </li>
+
+
+                    <li class="am-pagination-next ">
+                        <a href="javascript:;" class="">下一页</a>
+                    </li>
+
+                </ul></div>
+
+            </div>
+
+                
+        </div>
+        <div class="am_tuya_content_r">
+            <ul class="am_tuya_r_info">
+                <!--<li><i class="am-icon-heart"></i><span>10 人喜欢</span></li>-->
+                <li style="color:#fffafa"><i class="am-icon-comments"></i><span>评论数 <span class="disAmount">0</span></span></li>
+                <li style="color:#ff9966"><i class="am-icon-eye"></i><span>阅读量 <%= content.views %></span></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<%-  include('./login') %>
+<footer class="am_footer">
+    <div class="am_footer_con">
+        <div class="am_footer_link">
+            <span>关于Space</span>
+            <ul>
+                <li><a href="http://www.nanyuanfly.cn/ppp/">关于我</a></li>
+                <li><a href="http://www.nanyuanfly.cn/paper/">个人简历</a></li>
+                <li><a href="https://www.jq22.com/jquery-info20606">作品链接</a></li>
+            </ul>
+        </div>
+
+
+        <div class="am_footer_don">
+            <span>MoYi Space</span>
+            <dl>
+                <dt><img src="img/footdon.png?1" alt=""></dt>
+                <dd>技术交流，展示见解
+                </dd>
+
+            </dl>
+        </div>
+
+        <div class="am_footer_erweima">
+            <div class="am_footer_weixin"><img src="img/wx.jpg" alt=""><div class="am_footer_d_gzwx am-icon-weixin"> 微信赐饭</div></div>
+            <div class="am_footer_ddon"><img src="img/zfb.jpg" alt=""><div class="am_footer_d_dxz am-icon-cloud-download">支付宝赏饭</div></div>
+
+        </div>
+
+    </div>
+    <div class="am_info_line">Copyright(c)2019 <span>粤ICP备18132653号-2</span> All Rights Reserved </div>
+</footer>
+<script>
+    $(function(){
+        auto_window_height();
+        $(window).resize(function() {
+            auto_window_height();
+        });
+        function auto_window_height(){
+            $('.am_tuya').css('min-height',$(window).height() - 52 - 220);
+        }
+    });
+
+</script>
+<script src="/js/ajax.js"></script>
+<script src="/js/main.js"></script>
+<script src="/js/comment.js"></script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<footer class="am_footer">
+    <div class="am_footer_con">
+        <div class="am_footer_link">
+            <span>关于Space</span>
+            <ul>
+                <li><a href="http://www.nanyuanfly.cn/ppp/">关于我</a></li>
+                <li><a href="http://www.nanyuanfly.cn/paper/">个人简历</a></li>
+                <li><a href="https://www.jq22.com/jquery-info20606">作品链接</a></li>
+            </ul>
+        </div>
+
+
+        <div class="am_footer_don">
+            <span>MoYi Space</span>
+            <dl>
+                <dt><img src="img/footdon.png?1" alt=""></dt>
+                <dd>技术交流，展示见解
+                </dd>
+
+            </dl>
+        </div>
+
+        <div class="am_footer_erweima">
+            <div class="am_footer_weixin"><img src="img/wx.jpg" alt=""><div class="am_footer_d_gzwx am-icon-weixin"> 微信赐饭</div></div>
+            <div class="am_footer_ddon"><img src="img/zfb.jpg" alt=""><div class="am_footer_d_dxz am-icon-cloud-download">支付宝赏饭</div></div>
+
+        </div>
+
+    </div>
+    <div class="am_info_line">Copyright(c)2019 <span>粤ICP备18132653号-2</span> All Rights Reserved </div>
+</footer>
+<script>
+    $(function(){
+        auto_window_height();
+        $(window).resize(function() {
+            auto_window_height();
+        });
+        function auto_window_height(){
+            $('.bdfw_nr').css('min-height',$(window).height() - 52 - 220);
+        }
+    });
+
+</script>

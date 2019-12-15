@@ -1,0 +1,34 @@
+<%- include('../layout')%>
+
+<div class="am-g bdfw_nr" >
+    <ol class="am-breadcrumb bdfw_link">
+        <li><a href="/admin/content">内容首页</a></li>
+        <li class="am-active">内容修改</li>
+    </ol>
+    <form class="am-form" method="post" style="background:#ffffff">
+        <fieldset>
+            <legend><div class="bdfw_nr_title">所属分类 - <%= result.category.name %></div></legend>
+
+            <div class="am-form-group">
+                <label for="doc-ipt-email-1">标题：</label>
+                <input type="text" name="title" value="<%= result.title %>" class="" id="doc-ipt-email-1" placeholder="请输入标题">
+            </div>
+
+            <div class="am-form-group">
+                <label for="doc-ta-1">简介：</label>
+                <textarea class="" name="description" rows="5" id="doc-ta-1" placeholder="请输入简介"><%= result.description %></textarea>
+            </div>
+
+            <div class="am-form-group">
+                <label for="doc-ta-1">内容：</label>
+                <textarea class="" name="content" rows="10" id="doc-ta-1" placeholder="请输入内容"><%= result.content %></textarea>
+            </div>
+
+            <p><button type="submit" class="am-btn am-btn-default">点击修改内容</button></p>
+        </fieldset>
+    </form>
+</div>
+
+
+
+<%- include('../footer') %>

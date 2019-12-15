@@ -1,0 +1,21 @@
+<%- include('../layout')%>
+
+
+<div class="am-g bdfw_nr">
+    <ol class="am-breadcrumb bdfw_link">
+        <li><a href="/admin/category/add">分类添加</a></li>
+        <li class="am-active">分类信息</li>
+    </ol>
+<form class="am-form" action='/admin/category/add' method="post" style="background:#ffffff;">
+    <fieldset>
+        <legend></legend>
+        <div class="am-form-group">
+            <label for="doc-ipt-email-1">分类名称</label>
+            <input type="text" name="category" class="" id="doc-ipt-email-1" placeholder="请输入">
+        </div>
+        <p><button type="submit" class="am-btn am-btn-default">点击添加分类名称</button></p>
+    </fieldset>
+</form>
+</div>
+
+<%- include('../footer') %>

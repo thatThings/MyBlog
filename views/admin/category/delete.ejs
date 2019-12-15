@@ -1,0 +1,23 @@
+<%- include('../layout')%>
+
+
+<div class="am-g bdfw_nr">
+    <ol class="am-breadcrumb bdfw_link">
+        <li><a href="/admin/category">分类删除</a></li>
+        <li class="am-active">分类信息</li>
+    </ol>
+<!-- form  表单如果不写action 则默认提交方式是  不改变当前地址 -->
+<form class="am-form"  method="post" style="background:#ffffff;">
+    <fieldset>
+        <legend>分类删除 - <%= category %></legend>
+        <div class="am-form-group">
+            <label for="doc-ipt-email-1">分类名称</label>
+            <input type="text" name="category" class="" id="doc-ipt-email-1" value="<%= category %>">
+        </div>
+        <p><button type="submit" class="am-btn am-btn-default">点击删除分类名称</button></p>
+    </fieldset>
+</form>
+</div>
+
+
+<%- include('../footer') %>

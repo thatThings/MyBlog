@@ -1,0 +1,32 @@
+<%- include('../layout')%>
+
+<div class="am-g bdfw_nr">
+    <ol class="am-breadcrumb bdfw_link">
+        <li><a href="/admin/category">分类管理</a></li>
+        <li class="am-active">分类信息</li>
+    </ol>
+<table class="am-table am-table-bordered am-table-striped am-table-hover" style="background:#e5e4e9">
+    <thead>
+    <tr>
+        <!--<th>ID</th>-->
+        <th>分类名称</th>
+        <th>操作列表</th>
+    </tr>
+    </thead>
+    <tbody>
+    <% for(let i=0;i<results.length;i++){ %>
+        <tr>
+            <!--<td><%= results[i]._id %></td>-->
+            <td><%= results[i].name %></td>
+            <td>
+                <a href="/admin/category/update?category=<%= results[i].name %>">修改</a> |
+                <a href="/admin/category/delete?category=<%= results[i].name %>">删除</a>
+            </td>
+        </tr>
+    <% } %>
+    </tbody>
+</table>
+</div>
+
+
+<%- include('../footer') %>

@@ -1,0 +1,99 @@
+<%- include('../layout')%>
+
+<div class="am-g bdfw_nr">
+    <ol class="am-breadcrumb bdfw_link">
+        <li><a href="/admin/content">内容管理</a></li>
+        <li class="am-active">内容列表</li>
+    </ol>
+    <table class="am-table am-table-bordered am-table-striped am-table-hover" style="background:#e5e4e9">
+        <thead>
+        <tr>
+            <!--<th>ID</th>-->
+            <th>分类名称</th>
+            <th>标题</th>
+            <th>作者</th>
+            <th>阅读量</th>
+            <th>评论数</th>
+            <th>发布时间</th>
+            <th>操作类型</th>
+        </tr>
+        </thead>
+        <% if(userInfo.isAdmin){ %>
+        <tbody>
+        <% for(let i=0;i<results.length;i++){ %>
+            <tr>
+                <!--<td><%= results[i]._id %></td>-->
+                <td><%= results[i].category.name %></td>
+                <td><%= results[i].title %></td>
+                <td><%= results[i].author.username %></td>
+                <td><%= results[i].views %></td>
+                <td><%= results[i].comment.length %></td>
+                <td><%= results[i].time.toLocaleString() %></td>
+                <td>
+                    <a href="/admin/content/update?id=<%= results[i]._id %>">修改</a> |
+                    <a href="/admin/content/delete?id=<%= results[i]._id %>">删除</a>
+                </td>
+            </tr>
+        <% } %>
+        </tbody>
+        <% }else{ %>
+            <tbody>
+            <% for(let i=0;i<results.length;i++){ %>
+                <% if(results[i].author.username==userInfo.username){ %>
+                <tr>
+                    <!--<td><%= results[i]._id %></td>-->
+                    <td><%= results[i].category.name %></td>
+                    <td><%= results[i].title %></td>
+                    <td><%= results[i].author.username %></td>
+                    <td><%= results[i].views %></td>
+                    <td><%= results[i].comment.length %></td>
+                    <td><%= results[i].time.toLocaleString() %></td>
+                    <td>
+                        <a href="/admin/content/update?id=<%= results[i]._id %>">修改</a> |
+                        <a href="/admin/content/delete?id=<%= results[i]._id %>">删除</a>
+                    </td>
+                </tr>
+                <% } %>
+            <% } %>
+            </tbody>
+        <% } %>
+    </table>
+    <div class="am_news_load">
+        <div class="am_news_load" style="background:#f4f4f4">
+            <ul data-am-widget="pagination"
+                class="am-pagination am-pagination-select">
+                <li class="am-pagination-prev ">
+                    <a href="/admin/content?page=<%=page-1 %>" class="">上一页</a>
+                </li>
+                <% if(userInfo.isAdmin){ %>
+                    <li class="am-pagination-select">
+                        <select>
+                            <option value="#" class="">
+                                <%= page %> / <%= pageMax %>
+                            </option>
+
+                        </select>
+                    </li>
+                <% }else{ %>
+                    <li class="am-pagination-select">
+                        <select>
+                            <option value="#" class="">
+                                <%= page %> / <%= page %>
+                            </option>
+
+                        </select>
+                    </li>
+                <% } %>
+                <li class="am-pagination-next ">
+                    <a href="/admin/content?page=<%=page+1 %>" class="">下一页</a>
+                </li>
+            </ul></div>
+    </div>
+</div>
+
+
+
+<%- include('../footer') %>
+
+
+

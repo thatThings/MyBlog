@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>微秒如期</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="/css/amazeui.min.css">
+    <link rel="stylesheet" href="/css/petshow.css?6">
+    <link rel="stylesheet" href="/css/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style2.css"/>
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/amazeui.min.js"></script>
+    <script src="/js/amazeui.lazyload.min.js"></script>
+    <script src="/js/jquery.easing.min.js"></script>
+    <script src="/js/custom.js"></script>
+
+</head>
+<body>
+<header class="am-topbar am-topbar-inverse">
+    <div class="amz-container">
+        <h1 class="am-topbar-brand">
+            <a href="/" class="am-topbar-logo">
+                <img src="/img/logo.png?1" alt="">
+            </a>
+        </h1>
+        <button class="am-topbar-btn am-topbar-toggle am-btn am-btn-sm am-btn-success am-show-sm-only"
+                data-am-collapse="{target: '#doc-topbar-collapse-5'}">
+            <span class="am-sr-only">
+                导航切换
+            </span>
+            <span class="am-icon-bars">
+            </span>
+        </button>
+        <div class="am-collapse am-topbar-collapse" id="doc-topbar-collapse-5">
+            <ul class="am-nav am-nav-pills am-topbar-nav">
+                <li class="am-active">
+                    <a href="/">
+                        首页
+                    </a>
+                </li>
+                <% for(let i=0;i<categorys.length;i++){ %>
+                <li>
+                    <a href="/?category=<%= categorys[i]._id %>">
+                        <%= categorys[i].name %>
+                    </a>
+                </li>
+                <% } %>
+            </ul>
+            <% if(!userInfo){ %>
+            <div class="am-topbar-right">
+                <button class="am-btn am-btn-primary am-topbar-btn am-btn-sm openlogin" style="background:#505050;"><a href="#" onclick="return false;">登录</a></button><button class="am-btn am-btn-primary am-topbar-btn am-btn-sm reg" style="background:#323436;"><a href="#" onclick="return false;">注册</a></button>
+            </div>
+            <% }else{ %>
+            <div class="am-topbar-right">
+                <button class="am-btn am-btn-primary am-topbar-btn am-btn-sm" style="background:#505050;"><a href="/admin">后台</a></button>
+            </div>
+            <div class="am-topbar-right">
+                <button class="am-btn am-btn-primary am-topbar-btn am-btn-sm" style="background:#323436;" ><a id="out">退出</a></button>
+            </div>
+            <% } %>
+        </div>
+    </div>
+</header>
+
+

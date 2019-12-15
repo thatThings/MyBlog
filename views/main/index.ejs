@@ -1,0 +1,49 @@
+<%-  include('./layout') %>
+
+<div class="am-g bdfw_nr">
+<% for(let i=0;i<contents.length;i++){ %>
+<article data-am-widget="paragraph" class="am-paragraph am-paragraph-default article_nr"
+         data-am-paragraph="{ tableScrollable: true, pureview: true }">
+    <h1 class="article_nr_title"><%= contents[i].title %></h1>
+
+    <div class="article_nr_content">
+        <p class=paragraph-default-p><%= contents[i].description %></p>
+    </div>
+    <div class="article_nr_more_r">
+        <a class="am-btn am-btn-link" href="/view?contentId=<%= contents[i]._id%>"><span class="am-badge am-badge-secondary am-round am-text-default"><%= contents[i].category.name %></span>&nbsp;&nbsp;阅读全文</a>
+    </div>
+    <div class="article_nr_more">
+    </div>
+</article>
+<% } %>
+
+<%-  include('./login') %>
+
+<div class="am_news_load">
+    <div class="am_news_load" style="background:#f4f4f4">
+        <ul data-am-widget="pagination"
+            class="am-pagination am-pagination-select">
+            <li class="am-pagination-prev ">
+                <a href="/?category=<%= category %>&page=<%=page-1 %>" class="">上一页</a>
+            </li>
+            <li class="am-pagination-select">
+                <select>
+                    <option value="#" class="">
+                        <%= page %> / <%= pageMax %>
+                    </option>
+
+                </select>
+            </li>
+            <li class="am-pagination-next ">
+                <a href="/?category=<%= category %>&page=<%=page+1 %>" class="">下一页</a>
+            </li>
+        </ul></div>
+</div>
+
+</div>
+
+<%-  include('./footer') %>
+<script src="/js/ajax.js"></script>
+<script src="/js/main.js"></script>
+</body>
+</html>

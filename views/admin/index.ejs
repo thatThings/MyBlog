@@ -1,0 +1,39 @@
+
+<%- include('./layout') %>
+
+
+<div class="am-g bdfw_nr">
+    <ol class="am-breadcrumb bdfw_link">
+        <li><a href="/admin" class="am-icon-home">后台首页</a></li>
+        <li class="am-active">个人信息</li>
+    </ol>
+    <div class="am-u-sm-12">
+        <div class="bdfw_nr_block">
+            <div class="bdfw_nr_block_l">
+                <div class="bdfw_nr_title"><%= userInfo.username %></div>
+                <div class="bdfw_nr_brief_address">个人标签：学习 跑步 写代码 听音乐 看电影</div>
+                <div class="bdfw_nr_brief_address">神秘代码：世间所有事，都逃不过那句因为和所以</div>
+                <div class="bdfw_nr_smalltitle">更多信息</div>
+                <div class="bdfw_nr_brief_info_nr">
+                    <div class="bdfw_nr_brief_info_nr">
+                        <span>爱&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 好：</span>
+                        <span>前端开发</span>
+                        <span>产品运营</span>
+                        <span>游戏策划</span>
+                    </div>
+                    <div class="bdfw_nr_brief_info_nr">
+                        <span>联系方式：</span>
+                        <span>漂流瓶见~</span>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="bdfw_nr_block_r">
+                <a href="###"><img src="/img/c.png" alt=""></a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<%-  include('./footer') %>
