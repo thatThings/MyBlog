@@ -1,13 +1,15 @@
 # MyBlog
 
 > 一个 Amaze UI + nodejs + MongoDB的博客项目：可以多人共用的博客系统
-
+---
 [**在线预览**](http://www.nanyuanfly.cn:3666/)
 ---
-PC端主页
+**PC端主页**
+---
 ![image.png](https://upload-images.jianshu.io/upload_images/15171164-1bc8924dcc443d06.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 ---
-移动端主页
+**移动端主页**
+---
 ![image.png](https://upload-images.jianshu.io/upload_images/15171164-cbc6a2fdadd43de6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 ---
 
