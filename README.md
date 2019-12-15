@@ -4,21 +4,13 @@
 
 [**在线预览**](http://www.nanyuanfly.cn:3666/)
 ---
-home
-![图片预览](public/home.png)
+PC端主页
+![image.png](https://upload-images.jianshu.io/upload_images/15171164-1bc8924dcc443d06.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 ---
-tags
-![图片预览](public/tags.png)
+移动端主页
+![image.png](https://upload-images.jianshu.io/upload_images/15171164-cbc6a2fdadd43de6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 ---
-manage
-![图片预览](public/manage.png)
----
-charts
-![图片预览](public/charts.jpg)
----
-typewriting
-![图片预览](public/typewriting.gif)
----
+
 
 
 ## 技术栈
@@ -72,7 +64,7 @@ git clone https://github.com/thatThings/MyBlog.git
 ## 安装依赖以及开启开发模式
 npm install 
 
-## 启动node服务要先安装mongodb数据库,然后
+## 启动node服务前要先安装mongodb数据库,然后配置好数据集，最后
 node app.js
 
 ```
