@@ -43,8 +43,8 @@ Amaze UI + jQuery + ejs + nodejs + express + mongoose
 │
 ├─schema                // 数据库模型
 │
-├─views
-  ├─admin             // 管理员页面
+└─views
+  └─admin             // 管理员页面
     ├─category        // 分类管理页面
     ├─content         // 内容管理页面
     └─usr             // 用户管理页面
