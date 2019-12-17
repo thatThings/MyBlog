@@ -1,2 +1,4 @@
 public/* linguist-vendored
-*.css linguist-language=JavaScript
+*.css linguist-vendored
+*.html linguist-vendored
+*.ejs linguist-vendored
